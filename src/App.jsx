@@ -12,6 +12,8 @@ const App = () => {
   const [playerChoice, setPlayerChoice] = useState('rock');
   const [computerChoice, setComputerChoice] = useState('rock');
   const [winner, setWinner] = useState('Make your move!');
+  const [playerScore, setPlayerScore] = useState(0);
+  const [computerScore, setComputerScore] = useState(0);
 
   const buttonBaseClasses = 'hover:bg-green-400 hover:cursor-pointer rounded button transition-transform transform hover:scale-110';
 
@@ -24,8 +26,10 @@ const App = () => {
       (player === 'paper' && computer === 'rock') ||
       (player === 'scissor' && computer === 'paper')
     ) {
+      setPlayerScore((prev) => prev + 1);
       return 'Player Wins!';
     }
+    setComputerScore((prev) => prev + 1);
     return 'Computer Wins!';
   };
 
@@ -77,7 +81,7 @@ const App = () => {
         <div className="game w-full max-w-2xl m-auto h-auto md:h-[15rem] flex flex-col md:flex-row justify-around items-center gap-8 md:gap-0">
           <div className='text-center'>
             <h3 className='text-lg font-semibold mb-2'>Computer</h3>
-            {/* ref removed */}
+            <h4 className='text-2xl font-semibold mb-2'>Computer Score: {computerScore}</h4>
             <div className="text-[8rem] md:text-[10rem] rounded">
               {moves[computerChoice]}
             </div>
@@ -85,7 +89,7 @@ const App = () => {
           <div className='text-4xl md:text-6xl font-bold text-gray-400'>VS</div>
           <div className='text-center'>
             <h3 className='text-lg font-semibold mb-2'>Player</h3>
-            {/* ref removed */}
+            <h4 className='text-2xl font-semibold mb-2'>Player Score: {playerScore}</h4>
             <div className={`text-[8rem] md:text-[10rem] rounded`}>
               {moves[playerChoice]}
             </div>
