@@ -42,7 +42,11 @@ const App = () => {
     const randomComputerChoice = moveNames[Math.floor(Math.random() * moveNames.length)];
     setComputerChoice(randomComputerChoice);
   };
-
+  const handleResetClick = () => {
+    setComputerScore(0);
+    setPlayerScore(0);
+    setWinner('Make your move!');
+  }
   useEffect(() => {
     const buttons = document.querySelectorAll('.button');
     buttons.forEach((button) => {
@@ -109,6 +113,7 @@ const App = () => {
             </span>
           ))}
         </div>
+        <button onClick={handleResetClick} className='rounded font-mono font-semibold text-3xl border-2 border-slate-600 w-[20rem] m-auto hover:cursor-pointer hover:scale-110 transition-transform'>Reset</button>
       </main>
     </MainLayout>
   );
