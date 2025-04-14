@@ -12,10 +12,8 @@ const App = () => {
   const buttonClasses = 'text-[10rem] hover:bg-green-400 hover:cursor-pointer rounded button';
   const handleButtonClick = (e) => {
     setPlayerMove(() => moves[e.target.id]);
-    setComputerMove(() => {
-
-      return moves[Object.entries(moves)[Math.floor(Math.random() * 3)][0]];
-    });
+    const compMove = moves[Object.entries(moves)[Math.floor(Math.random() * 3)][0]];
+    setComputerMove(() => compMove);
   }
   useEffect(() => {
     const buttons = document.querySelectorAll(".button");
@@ -35,11 +33,13 @@ const App = () => {
         <h1 className='text-4xl text-slate-500 font-bold'>Rock Paper Scissors Game</h1>
       </header>
       <main className='flex flex-col gap-20'>
+        <h2 className='m-auto text-2xl text-slate-700 font-mono font-semibold'>And The Winner is :</h2>
         <div className="game w-2xl m-auto h-[15rem] flex justify-between items-center">
           <div className="computer text-[10rem] hover:bg-slate-400 hover:cursor-pointer rounded">{computerMove}</div>
           <div className="countdown text-8xl">1</div>
           <div className={`player ${playerMove ? "text-[10rem]" : "text-2xl"} hover:bg-slate-400 hover:cursor-pointer rounded`}>{playerMove}</div>
         </div>
+        <h2 className='m-auto text-2xl text-slate-700 font-mono font-semibold'>Choose Your move</h2>
         <div className='flex justify-center gap-5'>
           <span id='rock' className={buttonClasses}>{moves.rock}</span>
           <span id='paper' className={buttonClasses}>{moves.paper}</span>
