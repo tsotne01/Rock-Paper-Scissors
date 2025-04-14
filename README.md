@@ -12,7 +12,7 @@ This project is a web-based implementation of the classic Rock Paper Scissors ga
 * Clear display of player's move, computer's move, and the round's outcome.
 * Simple and clean user interface.
 * Built using React functional components and hooks (`useState`, `useEffect`).
-* (Optional: Mention if applicable) Styled using Tailwind CSS.
+* Styled using Tailwind CSS.
 
 ## Getting Started
 
