@@ -25,7 +25,7 @@ This project is a web-based implementation of the classic Rock Paper Scissors ga
 1.  **Clone the repository:**
     ```bash
     git clone [link of this repo](https://github.com/tsotne01/Rock-Paper-Scissors.git)
-    cd <repository-folder-name>
+    cd Rock-Paper-Scissors
     ```
 
 2.  **Install dependencies:**
