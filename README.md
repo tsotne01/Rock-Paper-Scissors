@@ -1,12 +1,47 @@
-# React + Vite
+# React Rock Paper Scissors Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple, interactive Rock Paper Scissors game built with React.
 
-Currently, two official plugins are available:
+## Description
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project is a web-based implementation of the classic Rock Paper Scissors game. Users can click on their desired move (Rock, Paper, or Scissors), and the application will randomly generate the computer's move. The result of the round (Player Wins, Computer Wins, or Tie) is then displayed.
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* Play Rock Paper Scissors against the computer.
+* Clear display of player's move, computer's move, and the round's outcome.
+* Simple and clean user interface.
+* Built using React functional components and hooks (`useState`, `useEffect`).
+* (Optional: Mention if applicable) Styled using Tailwind CSS.
+
+## Getting Started
+
+### Prerequisites
+
+* Node.js and npm (or yarn) installed on your machine.
+
+### Installation & Running
+
+1.  **Clone the repository:**
+    ```bash
+    git clone [link of this repo](https://github.com/tsotne01/Rock-Paper-Scissors.git)
+    cd <repository-folder-name>
+    ```
+
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    # or
+    # yarn install
+    ```
+
+3.  **Run the development server:**
+    ```bash
+    npm start
+    # or
+    # yarn start
+    ```
+
+4.  Open your browser and navigate to `http://localhost:3000` (or the port specified in your console).
+
+Enjoy the game!
